@@ -27,10 +27,9 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     updateTodo: (state, action) => {
-      const todo = state.todos.find((todo) => todo.id === action.payload.id);
+      const todo = state.todos.find((todo) => todo._id === action.payload.id);
       if (todo) {
-        todo.text = action.payload.text;
-        todo.email = action.payload.email;
+       todo.text = action.payload.text;
       }
     },
   },

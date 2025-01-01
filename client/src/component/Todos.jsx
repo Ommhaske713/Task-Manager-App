@@ -5,10 +5,10 @@ import UpdateTodo from "./UpdateTodo";
 
 const Todos = ({ darkMode }) => {
   const dispatch = useDispatch();
-  const { todos, status, error } = useSelector((state) => state.todo); // Access todos, status, and error
+  const { todos, status, error } = useSelector((state) => state.todo); 
 
   useEffect(() => {
-    dispatch(fetchTodos()); // Fetch todos on component mount
+    dispatch(fetchTodos()); 
   }, [dispatch]);
 
   if (status === "loading") {
@@ -21,15 +21,15 @@ const Todos = ({ darkMode }) => {
 
   return (
     <div className="mt-12 px-8">
-      <h2
-        className={`text-4xl font-bold text-center mb-8 ${
+      <h3
+        className={`text-3xl font-medium text-center mb-8 mr-1 ${
           darkMode ? "text-white" : "text-black"
         }`}
       >
-        Todos
-      </h2>
+         Added Tasks
+      </h3>
       <div className="w-full h-auto flex flex-wrap flex-col items-center text-center">
-        <div className="w-32 h-1 border-b-4 border-yellow-400 rounded-2xl mb-16"></div>
+        <div className="w-36 h-1 border-b-4 border-yellow-400 rounded-2xl mb-20 mt-[-22px] " ></div>
       </div>
       <ul className="space-y-4">
         {todos && todos.length > 0 ? (

@@ -14,7 +14,7 @@ function App() {
     <div className={`w-full h-screen ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} transition duration-500`}>
       <div className={`w-full h-full p-8 ${darkMode ? 'bg-black bg-opacity-50' : 'bg-white bg-opacity-50'}`}>
         <div className="flex justify-between items-center mb-8">
-          <h1 className={`text-2xl font-semibold flex justify-center items-center ml-[610px] ${darkMode ? 'text-white' : 'text-black'}`}>Task Manager</h1>
+          <h1 className={`text-4xl font-semibold flex justify-center items-center ml-[705px] ${darkMode ? 'text-white' : 'text-black'}`}>Task Manager</h1>
           <button onClick={toggleDarkMode} className="focus:outline-none">
             {darkMode ? <FaSun className="text-yellow-500 w-8 h-8 " /> : <FaMoon className="text-gray-800 w-8 h-8" />}
           </button>
